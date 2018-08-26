@@ -19,10 +19,10 @@
 set -e
 
 # Required!
-export DEVICE=falcon
+export DEVICE=peregrine
 export DEVICE_COMMON=msm8226-common
 export VENDOR=motorola
 
-export DEVICE_BRINGUP_YEAR=2013
+export DEVICE_BRINGUP_YEAR=2014
 
 ./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@

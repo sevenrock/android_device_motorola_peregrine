@@ -1,4 +1,4 @@
-# proprietary files for falcon
+# proprietary files for peregrine
 
 # Audio
 etc/Bluetooth_cal.acdb

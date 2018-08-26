@@ -15,7 +15,7 @@
 #
 
 # call the proprietary setup
-$(call inherit-product, vendor/motorola/falcon/falcon-vendor.mk)
+$(call inherit-product, vendor/motorola/peregrine/peregrine-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

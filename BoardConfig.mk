@@ -16,10 +16,11 @@
 # inherit from common msm8226-common
 -include device/motorola/msm8226-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/falcon
+DEVICE_PATH := device/motorola/peregrine
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon,falcon_gpe
+# Vendor Unification Init
+TARGET_INIT_VENDOR_LIB := libinit_peregrine
+TARGET_RECOVERY_DEVICE_MODULES := libinit_peregrine
 
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
@@ -28,25 +29,18 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 
 # Kernel
-TARGET_KERNEL_CONFIG := falcon_defconfig
-
-# Disable basic dexpreopt enabled from msm8226-common
-WITH_DEXPREOPT := false
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_falcon
-TARGET_RECOVERY_DEVICE_MODULES := libinit_falcon
+TARGET_KERNEL_CONFIG := peregrine_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 880803840 # GPE, regular edition: 1023410176
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5930598400 # 5930614784 - 16384
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1157627904
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 5930598400
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_CACHEIMAGE_PARTITION_SIZE := 694288384
+BOARD_CACHEIMAGE_PARTITION_SIZE := 560070656
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/motorola/falcon/BoardConfigVendor.mk
+-include vendor/motorola/peregrine/BoardConfigVendor.mk
