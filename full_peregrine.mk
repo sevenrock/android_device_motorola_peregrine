@@ -26,3 +26,4 @@ PRODUCT_NAME := full_peregrine
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := peregrine
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_SHIPPING_API_LEVEL := 18
